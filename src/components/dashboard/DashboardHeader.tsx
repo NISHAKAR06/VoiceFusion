@@ -11,7 +11,7 @@ export function DashboardHeader() {
   return (
     <header className="flex justify-between items-center animate-fade-in">
       <div>
-        <h1 className="text-3xl font-bold">Tamil Dub Cinema</h1>
+        <h1 className="text-3xl font-bold">VoiceFusionAI</h1>
         <p className="text-muted-foreground">Transform English movies with seamless Tamil dubbing</p>
       </div>
       <div className="flex items-center gap-4">
