@@ -21,7 +21,7 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <[YOUR_GIT_URL](https://github.com/NISHAKAR06/cinema-tamil-dub.git)>
+git clone https://github.com/NISHAKAR06/cinema-tamil-dub.git
 
 # Step 2: Navigate to the project directory.
 cd <VoicefusionAI>
