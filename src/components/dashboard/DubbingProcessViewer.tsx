@@ -6,7 +6,7 @@ import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { ChevronDown, FastForward, Pause, Play, SkipForward, Volume2, Film, Microphone, Languages, MoveHorizontal } from 'lucide-react';
+import { ChevronDown, FastForward, Pause, Play, SkipForward, Volume2, Film, Mic, Languages, MoveHorizontal } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { Slider } from '@/components/ui/slider';
 
@@ -15,7 +15,7 @@ const steps = [
     id: 'speech-recognition', 
     name: 'Speech Recognition', 
     description: 'Extracting spoken dialogues from the movie', 
-    icon: <Microphone className="h-5 w-5" />,
+    icon: <Mic className="h-5 w-5" />,
     status: 'completed', 
     progress: 100 
   },
