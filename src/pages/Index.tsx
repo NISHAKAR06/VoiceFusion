@@ -13,7 +13,7 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Tamil Dub Cinema</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">VOICEFUSIONAI</h1>
               <p className="text-xl opacity-90 mb-8">
                 Transform English movie dialogues into Tamil while preserving the original actor's voice, emotion, and lip-sync for a seamless dubbing experience.
               </p>
@@ -28,9 +28,10 @@ const Index = () => {
                 </Button>
                 <Button 
                   onClick={() => navigate('/signin')} 
-                  variant="outline" 
+                  //variant="outline" 
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-tamil-primary"
+                  //className="border-white text-white hover:bg-white hover:text-tamil-primary"
+                  className="bg-white text-tamil-primary hover:bg-tamil-light hover:text-tamil-primary"
                 >
                   Sign In
                 </Button>
@@ -119,12 +120,12 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <h3 className="text-lg font-bold">Tamil Dub Cinema</h3>
+              <h3 className="text-lg font-bold">VoiceFusionAI</h3>
               <p className="text-muted-foreground">Transform movies with seamless Tamil dubbing</p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">
-                © 2023 Tamil Dub Cinema. All rights reserved.
+                © 2025 Voice Fusion AI. All rights reserved.
               </p>
             </div>
           </div>

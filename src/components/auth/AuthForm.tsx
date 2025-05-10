@@ -141,7 +141,7 @@ export function AuthForm({ type, onSubmit }: AuthFormProps) {
           id="email"
           name="email"
           type="email"
-          placeholder="john@example.com"
+          //placeholder="john@example.com"
           value={formData.email}
           onChange={handleChange}
         />
@@ -153,7 +153,7 @@ export function AuthForm({ type, onSubmit }: AuthFormProps) {
           id="password"
           name="password"
           type="password"
-          placeholder="••••••••"
+          //placeholder="••••••••"
           value={formData.password}
           onChange={handleChange}
         />
