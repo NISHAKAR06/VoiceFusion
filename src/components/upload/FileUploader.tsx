@@ -16,7 +16,11 @@ interface UploadedFile {
   status: 'uploading' | 'completed' | 'error';
 }
 
-export function FileUploader() {
+interface FileUploaderProps {
+  onFileUploaded?: (file: UploadedFile) => void;
+}
+
+export function FileUploader({ onFileUploaded }: FileUploaderProps) {
   const [files, setFiles] = useState<UploadedFile[]>([]);
   const [dragActive, setDragActive] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -78,11 +82,19 @@ export function FileUploader() {
                 title: "File uploaded successfully",
                 description: `${file.name} is ready for processing.`,
               });
-              return {
+              
+              const completedFile = {
                 ...f,
                 progress: 100,
-                status: 'completed',
+                status: 'completed' as const,
               };
+              
+              // Call callback if provided
+              if (onFileUploaded) {
+                onFileUploaded(completedFile);
+              }
+              
+              return completedFile;
             }
             
             return {
@@ -223,4 +235,22 @@ export function FileUploader() {
       </CardContent>
     </Card>
   );
+  
+  function getFileIcon(fileType: string) {
+    if (fileType.includes('video')) {
+      return <div className="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-600 rounded">MP4</div>;
+    } else if (fileType.includes('text')) {
+      return <div className="w-8 h-8 flex items-center justify-center bg-green-100 text-green-600 rounded">TXT</div>;
+    } else {
+      return <File className="w-8 h-8 text-muted-foreground" />;
+    }
+  }
+  
+  function formatFileSize(bytes: number): string {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
 }
